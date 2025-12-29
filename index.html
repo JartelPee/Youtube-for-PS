@@ -2,32 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EQTUBE</title>
+  <title>DualTube</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <h1>EQTUBE</h1>
-    <input type="text" placeholder="Search">
-  </header>
+<header>
+  <h1>DualTube</h1>
+  <label class="upload-btn">
+    Upload Video
+    <input type="file" id="videoUpload" accept="video/*" hidden>
+  </label>
+</header>
 
-  <!-- Video Grid -->
-  <main class="video-grid">
-    <div class="video-card">
-      <video src="sample.mp4" controls></video>
-      <h3>My First Video</h3>
-      <p>1,234 views</p>
-    </div>
+<main id="videoContainer">
+  <!-- Videos appear here -->
+</main>
 
-    <div class="video-card">
-      <video src="sample.mp4" controls></video>
-      <h3>Cool EQTUBE Clip</h3>
-      <p>567 views</p>
-    </div>
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
