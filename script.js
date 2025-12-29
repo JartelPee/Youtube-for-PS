@@ -1,11 +1,15 @@
-console.log("Welcome to EQTUBE 🚀");
+const uploadInput = document.getElementById("videoUpload");
+const container = document.getElementById("videoContainer");
 
-const videos = document.querySelectorAll("video");
+uploadInput.addEventListener("change", () => {
+  const file = uploadInput.files[0];
+  if (!file) return;
 
-videos.forEach(video => {
-  video.addEventListener("play", () => {
-    videos.forEach(v => {
-      if (v !== video) v.pause();
-    });
-  });
+  const videoURL = URL.createObjectURL(file);
+
+  const video = document.createElement("video");
+  video.src = videoURL;
+  video.controls = true;
+
+  container.prepend(video);
 });
